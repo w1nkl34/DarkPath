@@ -1,0 +1,231 @@
+fileFormatVersion: 2
+guid: 5e83cc9826f57b648b4b1443b6b3db4a
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: ankle_chain_01
+    100002: ankle_chain_02
+    100004: ball
+    100006: ball_l
+    100008: ball_n_chain
+    100010: ball_n_chain_01
+    100012: ball_n_chain_02
+    100014: ball_n_chain_03
+    100016: ball_n_chain_04
+    100018: ball_n_chain_05
+    100020: ball_n_chain_end_01
+    100022: ball_n_chain_end_02
+    100024: ball_n_chain_root
+    100026: ball_r
+    100028: calf_l
+    100030: calf_r
+    100032: Character1_LeftFootIndex1
+    100034: Character1_LeftFootIndex2
+    100036: Character1_RightFootIndex1
+    100038: Character1_RightFootIndex2
+    100040: clavicle_l
+    100042: clavicle_r
+    100044: foot_l
+    100046: foot_r
+    100048: hand_l
+    100050: hand_r
+    100052: head
+    100054: index_01_l
+    100056: index_01_r
+    100058: index_02_l
+    100060: index_02_r
+    100062: index_03_l
+    100064: index_03_r
+    100066: jaw
+    100068: lowerarm_l
+    100070: lowerarm_r
+    100072: middle_01_l
+    100074: middle_01_r
+    100076: middle_02_l
+    100078: middle_02_r
+    100080: middle_03_l
+    100082: middle_03_r
+    100084: neck_01
+    100086: pelvis
+    100088: ring_01_l
+    100090: ring_01_r
+    100092: ring_02_l
+    100094: ring_02_r
+    100096: ring_03_l
+    100098: ring_03_r
+    100100: root
+    100102: shoulder_pad
+    100104: skeleton_grunt
+    100106: //RootNode
+    100108: spine_01
+    100110: spine_02
+    100112: spine_03
+    100114: thigh_l
+    100116: thigh_r
+    100118: thumb_01_l
+    100120: thumb_01_r
+    100122: thumb_02_l
+    100124: thumb_02_r
+    100126: thumb_03_l
+    100128: thumb_03_r
+    100130: upperarm_l
+    100132: upperarm_r
+    400000: ankle_chain_01
+    400002: ankle_chain_02
+    400004: ball
+    400006: ball_l
+    400008: ball_n_chain
+    400010: ball_n_chain_01
+    400012: ball_n_chain_02
+    400014: ball_n_chain_03
+    400016: ball_n_chain_04
+    400018: ball_n_chain_05
+    400020: ball_n_chain_end_01
+    400022: ball_n_chain_end_02
+    400024: ball_n_chain_root
+    400026: ball_r
+    400028: calf_l
+    400030: calf_r
+    400032: Character1_LeftFootIndex1
+    400034: Character1_LeftFootIndex2
+    400036: Character1_RightFootIndex1
+    400038: Character1_RightFootIndex2
+    400040: clavicle_l
+    400042: clavicle_r
+    400044: foot_l
+    400046: foot_r
+    400048: hand_l
+    400050: hand_r
+    400052: head
+    400054: index_01_l
+    400056: index_01_r
+    400058: index_02_l
+    400060: index_02_r
+    400062: index_03_l
+    400064: index_03_r
+    400066: jaw
+    400068: lowerarm_l
+    400070: lowerarm_r
+    400072: middle_01_l
+    400074: middle_01_r
+    400076: middle_02_l
+    400078: middle_02_r
+    400080: middle_03_l
+    400082: middle_03_r
+    400084: neck_01
+    400086: pelvis
+    400088: ring_01_l
+    400090: ring_01_r
+    400092: ring_02_l
+    400094: ring_02_r
+    400096: ring_03_l
+    400098: ring_03_r
+    400100: root
+    400102: shoulder_pad
+    400104: skeleton_grunt
+    400106: //RootNode
+    400108: spine_01
+    400110: spine_02
+    400112: spine_03
+    400114: thigh_l
+    400116: thigh_r
+    400118: thumb_01_l
+    400120: thumb_01_r
+    400122: thumb_02_l
+    400124: thumb_02_r
+    400126: thumb_03_l
+    400128: thumb_03_r
+    400130: upperarm_l
+    400132: upperarm_r
+    2100000: skeleton_grunt_mat
+    4300000: ball_n_chain
+    4300002: skeleton_grunt
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: ball_n_chain
+    13700002: skeleton_grunt
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: skeleton_grunt_mat
+    second: {fileID: 2100000, guid: a545e46ed3bb8694ab2be29efeba8ff3, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
