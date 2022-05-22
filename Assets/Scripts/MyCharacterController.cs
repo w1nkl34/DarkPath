@@ -109,7 +109,7 @@ public class MyCharacterController : MonoBehaviour
     {
         if(other.gameObject.tag == "experience")
         {
-            LeanTween.move(other.gameObject,transform.position,0.15f).setOnComplete(() => {
+            LeanTween.move(other.gameObject,new Vector3(transform.position.x,transform.position.y+2,transform.position.z),0.15f).setOnComplete(() => {
                 GainExperience();
                 Destroy(other.gameObject);
             });
