@@ -10,14 +10,20 @@ TagManager:
   - Synty Medium Farm
   - Synty Small Farm
   - PW - Nature
+  - FX
+  - bullet
+  - World
+  - Target
+  - Enemy
+  - experience
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
+  - Wall
   - 
   - PW_VFX
   - PW_Object_Small
