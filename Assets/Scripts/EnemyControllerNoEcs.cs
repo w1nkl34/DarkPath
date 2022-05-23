@@ -22,7 +22,7 @@ public class EnemyControllerNoEcs : MonoBehaviour
     public GameManager gm;
 
     public GameObject damagePrefab;
-    bool dead = false;
+    public bool dead = false;
     
 
     void Awake()
@@ -116,7 +116,7 @@ public class EnemyControllerNoEcs : MonoBehaviour
         if(value <= 2)
         exp =  Instantiate(gm.experienceParticle,transform.position,Quaternion.Euler(new Vector3(0,0,0)));
         if(exp != null)
-        Destroy(exp,30);
+        Destroy(exp,60);
     }
 
     public bool canDamage = false;

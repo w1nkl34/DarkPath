@@ -53,7 +53,7 @@ public class MyCharacterController : MonoBehaviour
         if(waitAttackFinish == false)
         damageCounter += Time.deltaTime;
 
-        if(damageCounter > 0.3 && waitAttackFinish == false)
+        if(damageCounter > 0.1 && waitAttackFinish == false)
         {
             closestEnemy = GetClosestEnemy();
             waitAttackFinish = true;
@@ -132,13 +132,13 @@ public class MyCharacterController : MonoBehaviour
         GameObject tMin = null;
         float minDist = Mathf.Infinity;
         Vector3 currentPos = transform.position;
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach (GameObject t in enemies)
+        EnemyControllerNoEcs[] enemies = GameObject.FindObjectsOfType<EnemyControllerNoEcs>();
+        foreach (EnemyControllerNoEcs t in enemies)
         {
             float dist = Vector3.Distance(t.transform.position, currentPos);
-            if (dist < minDist)
+            if (dist < minDist && !t.dead)
             {
-                tMin = t;
+                tMin = t.gameObject;
                 minDist = dist;
             }
         }
@@ -160,8 +160,9 @@ public class MyCharacterController : MonoBehaviour
         // if(x == 0)
         // Instantiate(bullet2,new Vector3(transform.position.x,transform.position.y+1,transform.position.z),
         // Quaternion.Euler(0,Random.Range(0f,360f),0));
-         if(x == 0) Instantiate(bullet2,new Vector3(transform.position.x + Random.Range(-2f,2f),transform.position.y+1,transform.position.z),transform.rotation);
-        if(x == 1) Instantiate(bullet,new Vector3(transform.position.x + Random.Range(-2f,2f),transform.position.y+1,transform.position.z),transform.rotation);
+        //  if(x == 0)
+          Instantiate(bullet,new Vector3(transform.position.x + Random.Range(-2f,2f),transform.position.y+1,transform.position.z),transform.rotation);
+        // if(x == 1) Instantiate(bullet,new Vector3(transform.position.x + Random.Range(-2f,2f),transform.position.y+1,transform.position.z),transform.rotation);
         // if(x == 2)
         // Instantiate(bullet3,new Vector3(transform.position.x + Random.Range(-2f,2f),transform.position.y+1,transform.position.z),transform.rotation);
         Instantiate(bullet3,new Vector3(transform.position.x,transform.position.y+1,transform.position.z),

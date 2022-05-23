@@ -59,15 +59,13 @@ public class ProjectileMover : MonoBehaviour
                     Destroy(hitInstance, 2);
 
                 }
-                // if (UseFirePointRotation) { hitInstance.transform.rotation = gameObject.transform.rotation * Quaternion.Euler(0, 180f, 0); }
-                // else if (rotationOffset != Vector3.zero) { hitInstance.transform.rotation = Quaternion.Euler(rotationOffset); }
                 if(collision.gameObject.tag == "Enemy")
                 {
                     bool push = false;
                     int pushVal = Random.Range(0,3);
                     if(pushVal == 0 )
                     push = true;
-                collision.gameObject.GetComponent<EnemyControllerNoEcs>().DamagePlayer(Random.Range(1,15),push);
+                collision.gameObject.GetComponent<EnemyControllerNoEcs>().DamagePlayer(Random.Range(10,25),push);
                 }
 
                

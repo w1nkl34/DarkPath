@@ -3146,7 +3146,7 @@ MonoBehaviour:
   - {fileID: 5458741266305983051, guid: 8c134882ab421e345ad35b690f6bff2a, type: 3}
   characterPos: {x: 0, y: 0, z: 0}
   experienceParticle: {fileID: 1240875055126586, guid: 2efd61b9ccf276c48af088089fcea0eb, type: 3}
-  spawnCounter: 20
+  spawnCounter: 100
   uIController: {fileID: 182812113}
 --- !u!4 &271042557
 Transform:
@@ -17875,7 +17875,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835688780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.03, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1.5000005, y: 1.5, z: 1.5000005}
   m_Children:
   - {fileID: 1843448843}
@@ -17917,7 +17917,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 1580133494715678, guid: 30a2224334c85244595f52a7a83227d1, type: 3}
   bullet2: {fileID: 1473103337094032, guid: 6b29274ac2e79904986a87aaee461137, type: 3}
-  bullet3: {fileID: 1481587283673810, guid: cf0756612a842cb4ba09ad101dd6bcb3, type: 3}
+  bullet3: {fileID: 1294834399362254, guid: 9226726c851a790469d64d3093814ad4, type: 3}
   moveSpeed: 6
   currentHealth: 300
   maxHealth: 300
