@@ -4831,6 +4831,7 @@ MonoBehaviour:
   hit: {fileID: 1140696612886092, guid: 5b560e6b1f3f4494b8bf4b354497697e, type: 3}
   flash: {fileID: 0}
   Detached: []
+  rioc: 0
 --- !u!199 &199162085201762356
 ParticleSystemRenderer:
   serializedVersion: 6

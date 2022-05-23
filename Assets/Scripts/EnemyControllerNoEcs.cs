@@ -35,11 +35,11 @@ public class EnemyControllerNoEcs : MonoBehaviour
     {
         if(init)
         {
-            if(currentHealth <= 0 && dead == false)
-            {
-                KillPlayer();
-                SpawnExperience();
-            }
+            // if(currentHealth <= 0 && dead == false)
+            // {
+            //     KillPlayer();
+            //     SpawnExperience();
+            // }
             if(!dead)
             {
                 GetDistance();
@@ -60,12 +60,18 @@ public class EnemyControllerNoEcs : MonoBehaviour
            rb.velocity = Vector3.zero;
            rb.angularVelocity = Vector3.zero;
        }
-        if(distance > 30)
+        if(distance > 40)
         KillPlayer();
     }
 
     public void DamagePlayer(float damage,bool push)
     {
+        currentHealth -= damage;
+        if(currentHealth <= 0)
+        {
+                KillPlayer();
+                SpawnExperience();
+        }
         if(Constants.damageTextCount < Constants.maxDamageTextCount)
         {
         GameObject textIn = Instantiate(damagePrefab,new Vector3(transform.position.x+Random.Range(-1f,1f),transform.position.y+2,transform.position.z),Quaternion.identity);
@@ -91,7 +97,6 @@ public class EnemyControllerNoEcs : MonoBehaviour
          });
         if(push)
         rb.AddForce(-transform.forward *2 *moveSpeed,ForceMode.Impulse);
-        currentHealth -= damage;
         healthFill.fillAmount = currentHealth /maxHealth;
     }
 
@@ -113,7 +118,7 @@ public class EnemyControllerNoEcs : MonoBehaviour
     {
         var value = Random.Range(0,5);
         GameObject exp = null;
-        if(value <= 2)
+        if(value <= 3)
         exp =  Instantiate(gm.experienceParticle,transform.position,Quaternion.Euler(new Vector3(0,0,0)));
         if(exp != null)
         Destroy(exp,60);
@@ -143,7 +148,7 @@ public class EnemyControllerNoEcs : MonoBehaviour
         {
             canDamage = false;
             damageTimer = 0;
-            other.gameObject.GetComponent<MyCharacterController>().DamagePlayer(Random.Range(10,20));
+            other.gameObject.GetComponent<MyCharacterController>().DamagePlayer(Random.Range(40,60));
         }
     }
     

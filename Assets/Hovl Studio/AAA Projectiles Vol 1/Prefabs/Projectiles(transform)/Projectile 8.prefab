@@ -4913,6 +4913,7 @@ MonoBehaviour:
   hit: {fileID: 1105495686751570, guid: 4328596502e67c1468c5794bdd5067b4, type: 3}
   flash: {fileID: 0}
   Detached: []
+  rioc: 0
 --- !u!136 &136001570826098454
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -3146,7 +3146,6 @@ MonoBehaviour:
   - {fileID: 5458741266305983051, guid: 8c134882ab421e345ad35b690f6bff2a, type: 3}
   characterPos: {x: 0, y: 0, z: 0}
   experienceParticle: {fileID: 1240875055126586, guid: 2efd61b9ccf276c48af088089fcea0eb, type: 3}
-  spawnCounter: 100
   uIController: {fileID: 182812113}
 --- !u!4 &271042557
 Transform:
@@ -7954,6 +7953,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.041
       objectReference: {fileID: 0}
+    - target: {fileID: 8122464673482881617, guid: 92a911e4c2b73644aac78f84e561446b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b7254f03ac35b7045a26d59c3da6164e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92a911e4c2b73644aac78f84e561446b, type: 3}
 --- !u!4 &739322114 stripped
@@ -10767,8 +10770,8 @@ Camera:
   near clip plane: 0.1
   far clip plane: 5000
   field of view: 45
-  orthographic: 0
-  orthographic size: 17
+  orthographic: 1
+  orthographic size: 21
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -10791,8 +10794,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991416343}
-  m_LocalRotation: {x: 0.47296557, y: 0.031401396, z: -0.016870128, w: 0.8803596}
-  m_LocalPosition: {x: -2.0000036, y: 40.43, z: -27.999998}
+  m_LocalRotation: {x: 0.45782524, y: 0.0316856, z: -0.016330091, w: 0.88832736}
+  m_LocalPosition: {x: -2.0000036, y: 36.43, z: -27.999998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11679,7 +11682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damping: {x: 0, y: 0, z: 0}
-  ShoulderOffset: {x: 28, y: 39, z: 0}
+  ShoulderOffset: {x: 28, y: 35, z: 0}
   VerticalArmLength: 0.4
   CameraSide: 1
   CameraDistance: 2
@@ -11700,7 +11703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: -3, z: 0}
+  m_TrackedObjectOffset: {x: 0, y: -4, z: 0}
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
@@ -12757,7 +12760,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1366123507}
   m_Lens:
     FieldOfView: 45
-    OrthographicSize: 17
+    OrthographicSize: 21
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -12777,8 +12780,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197489297}
-  m_LocalRotation: {x: 0.47296557, y: 0.031401396, z: -0.016870128, w: 0.8803596}
-  m_LocalPosition: {x: -2.0000036, y: 40.43, z: -27.999998}
+  m_LocalRotation: {x: 0.45782524, y: 0.0316856, z: -0.016330091, w: 0.88832736}
+  m_LocalPosition: {x: -2.0000036, y: 36.43, z: -27.999998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1063389376}
@@ -17923,6 +17926,7 @@ MonoBehaviour:
   maxHealth: 300
   healthBar: {fileID: 57725989}
   healthFillBar: {fileID: 1009884629}
+  level: 1
 --- !u!54 &1835688786
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -61,28 +61,35 @@ public class ProjectileMover : MonoBehaviour
                 }
                 if(collision.gameObject.tag == "Enemy")
                 {
+               
                     bool push = false;
-                    int pushVal = Random.Range(0,3);
-                    if(pushVal == 0 )
-                    push = true;
-                collision.gameObject.GetComponent<EnemyControllerNoEcs>().DamagePlayer(Random.Range(10,25),push);
+                    // int pushVal = Random.Range(0,3);
+                    // if(pushVal == 0 )
+                    // push = true;
+                    collision.gameObject.GetComponent<EnemyControllerNoEcs>().DamagePlayer(Random.Range(30,50),push);
                 }
-
                
             }
 
             if(!rioc)
             {
-                rb.constraints = RigidbodyConstraints.FreezeAll;
-                speed = 0;
-                foreach (var detachedPrefab in Detached)
-                {
-                    if (detachedPrefab != null)
-                    {
-                        detachedPrefab.transform.parent = null;
-                    }
-                }
+                // rb.constraints = RigidbodyConstraints.FreezeAll;
+                // speed = 0;
+                // foreach (var detachedPrefab in Detached)
+                // {
+                //     if (detachedPrefab != null)
+                //     {
+                //         detachedPrefab.transform.parent = null;
+                //     }
+                // }
+                // if(collision.gameObject.tag == "Enemy")
+                // {
+                //  if(!collision.gameObject.GetComponent<EnemyControllerNoEcs>().dead)
+                // Destroy(gameObject);
+                // }
+                // else
                 Destroy(gameObject);
+
             }
         }
 

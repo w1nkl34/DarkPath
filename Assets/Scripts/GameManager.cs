@@ -8,10 +8,11 @@ using Random = UnityEngine.Random;
 public class GameManager : MonoBehaviour
 {
     public GameObject character;
+    MyCharacterController myCharacterController;
     public GameObject[] enemies;
     public Vector3 characterPos;
     public GameObject experienceParticle;
-    public int spawnCounter = 10;
+    int spawnCounter = 5;
 
     public UIController uIController;
 
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         Application.targetFrameRate = 30;
+        myCharacterController = character.GetComponent<MyCharacterController>();
     }
 
 
@@ -31,6 +33,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        spawnCounter = 5 + (3 * (myCharacterController.level-1));
         if(Vector3.Distance(characterPos,character.transform.position) > 40)
         Spawn(true);
     }
@@ -52,7 +55,7 @@ public class GameManager : MonoBehaviour
     {
       
         characterPos = character.transform.position;
-        if(Constants.spawnPool <= spawnCounter * 1.5 || spawn == true)
+        if(Constants.spawnPool <= spawnCounter  || spawn == true)
         {
              StartCoroutine(SpawnEnemies(0,spawnCounter/5,0));
              StartCoroutine(SpawnEnemies(0.2f,spawnCounter/5,spawnCounter/5));
@@ -87,9 +90,9 @@ public class GameManager : MonoBehaviour
             GameObject instantiatedEnemy = Instantiate(enemies[value] ,
             new Vector3(position.x +  character.transform.position.x,1,position.z  + character.transform.position.z),Quaternion.identity);
 
-            float hp = Random.Range(50f,100f);
+            float hp = Random.Range(25f,40f);
             instantiatedEnemy.GetComponent<EnemyControllerNoEcs>().maxHealth = hp;
-            instantiatedEnemy.GetComponent<EnemyControllerNoEcs>().moveSpeed = Random.Range(1f,5f);
+            instantiatedEnemy.GetComponent<EnemyControllerNoEcs>().moveSpeed = Random.Range(3.5f,3.5f);
             instantiatedEnemy.GetComponent<EnemyControllerNoEcs>().currentHealth = hp;
             instantiatedEnemy.GetComponent<EnemyControllerNoEcs>().gm = this;
             instantiatedEnemy.GetComponent<EnemyControllerNoEcs>().init = true;

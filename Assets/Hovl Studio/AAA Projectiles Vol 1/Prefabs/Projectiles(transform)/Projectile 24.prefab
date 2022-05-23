@@ -4833,6 +4833,7 @@ MonoBehaviour:
   flash: {fileID: 1889697189104820, guid: 918bed4b1a6905d4aaa25af94c2caa31, type: 3}
   Detached:
   - {fileID: 1712508192486480}
+  rioc: 0
 --- !u!199 &199133798922647740
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -9775,7 +9776,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 35f5e6dc715494f44b17248eee5426bd, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -27,7 +27,7 @@ public class MyCharacterController : MonoBehaviour
 
      CharacterController characterController;
 
-      int level = 1;
+      public int level = 1;
       float currentExp = 0;
 
       float damageCounter = 0;
@@ -53,13 +53,21 @@ public class MyCharacterController : MonoBehaviour
         if(waitAttackFinish == false)
         damageCounter += Time.deltaTime;
 
-        if(damageCounter > 0.1 && waitAttackFinish == false)
+        float decVal = 0.1f * (level-1);
+        if(decVal <= 0.1)
+        decVal = 0.1f;
+        if(damageCounter > 0.5 - decVal && waitAttackFinish == false)
         {
             closestEnemy = GetClosestEnemy();
+                if(closestEnemy != null)
+                {
+
             waitAttackFinish = true;
             damageCounter = 0;
+        
             animator.SetBool("attacking",true);
-            animator.SetLayerWeight(1,1);
+                }
+
         }
     }
 
@@ -136,7 +144,7 @@ public class MyCharacterController : MonoBehaviour
         foreach (EnemyControllerNoEcs t in enemies)
         {
             float dist = Vector3.Distance(t.transform.position, currentPos);
-            if (dist < minDist && !t.dead)
+            if (dist < minDist && !t.dead && dist <= 20)
             {
                 tMin = t.gameObject;
                 minDist = dist;
@@ -146,27 +154,40 @@ public class MyCharacterController : MonoBehaviour
     }
 
 
-    public IEnumerator AttackCor()
-    {
-        yield return new WaitForSeconds(2f);
-        StartCoroutine(AttackCor());
-    }
-
     public void Attack()
     {
         int x = Random.Range(0,2);
-        for(int i = 0; i<10; i++)
+        for(int i = 0; i<level; i++)
         {
-        // if(x == 0)
-        // Instantiate(bullet2,new Vector3(transform.position.x,transform.position.y+1,transform.position.z),
+            int val = 0;
+            switch(i)
+            {
+                case 0:
+                val = 0;
+                break;
+                case 1:
+                val = 10;
+                break;
+                case 2:
+                val = -10;
+                break;
+                case 3:
+                val = 20;
+                break;
+                case 4:
+                val = -20;
+                break;
+                case 5:
+                val = -5;
+                break;
+                case 6:
+                val = -5;
+                break;
+            }
+          Instantiate(bullet,new Vector3(transform.position.x ,transform.position.y+1,transform.position.z),transform.rotation * Quaternion.Euler(0,val,0));
+
+        // Instantiate(bullet3,new Vector3(transform.position.x,transform.position.y+1,transform.position.z),
         // Quaternion.Euler(0,Random.Range(0f,360f),0));
-        //  if(x == 0)
-          Instantiate(bullet,new Vector3(transform.position.x + Random.Range(-2f,2f),transform.position.y+1,transform.position.z),transform.rotation);
-        // if(x == 1) Instantiate(bullet,new Vector3(transform.position.x + Random.Range(-2f,2f),transform.position.y+1,transform.position.z),transform.rotation);
-        // if(x == 2)
-        // Instantiate(bullet3,new Vector3(transform.position.x + Random.Range(-2f,2f),transform.position.y+1,transform.position.z),transform.rotation);
-        Instantiate(bullet3,new Vector3(transform.position.x,transform.position.y+1,transform.position.z),
-        Quaternion.Euler(0,Random.Range(0f,360f),0));
 
         }
     }
