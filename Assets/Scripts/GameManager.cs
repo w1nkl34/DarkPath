@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] enemies;
     public Vector3 characterPos;
     public GameObject experienceParticle;
-    int spawnCounter = 5;
+    int spawnCounter = 12;
 
     public UIController uIController;
 
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        spawnCounter = 5 + (3 * (myCharacterController.level-1));
+        spawnCounter = 12 + (3 * (myCharacterController.level-1));
         if(Vector3.Distance(characterPos,character.transform.position) > 40)
         Spawn(true);
     }
@@ -86,13 +86,14 @@ public class GameManager : MonoBehaviour
             if(position.z >= -15 &&position.z <0 )
                 position.z = Random.Range(-15f,-30f);
             }
-            var value = Random.Range(0,enemies.Length);
+            // var value = Random.Range(0,enemies.Length);
+            var value = 2;
             GameObject instantiatedEnemy = Instantiate(enemies[value] ,
             new Vector3(position.x +  character.transform.position.x,1,position.z  + character.transform.position.z),Quaternion.identity);
 
-            float hp = Random.Range(25f,40f);
+            float hp = Random.Range(10f,10f);
             instantiatedEnemy.GetComponent<EnemyControllerNoEcs>().maxHealth = hp;
-            instantiatedEnemy.GetComponent<EnemyControllerNoEcs>().moveSpeed = Random.Range(3.5f,3.5f);
+            instantiatedEnemy.GetComponent<EnemyControllerNoEcs>().moveSpeed = 2.5f;
             instantiatedEnemy.GetComponent<EnemyControllerNoEcs>().currentHealth = hp;
             instantiatedEnemy.GetComponent<EnemyControllerNoEcs>().gm = this;
             instantiatedEnemy.GetComponent<EnemyControllerNoEcs>().init = true;

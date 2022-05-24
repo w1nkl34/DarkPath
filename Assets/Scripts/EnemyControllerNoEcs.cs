@@ -78,7 +78,7 @@ public class EnemyControllerNoEcs : MonoBehaviour
         textIn.GetComponent<DamageText>().text.text = damage.ToString();
         }
         Material mymat = _renderer.material;
-        LeanTween.value(gameObject,Color.black, Color.grey, 0.05f).setOnUpdate((Color val) =>
+        LeanTween.value(gameObject,Color.black, Color.white, 0.05f).setOnUpdate((Color val) =>
         {
                 mymat.SetColor("_EmissionColor", val);
 
@@ -126,7 +126,7 @@ public class EnemyControllerNoEcs : MonoBehaviour
 
     public bool canDamage = false;
 
-    public float damageSpeed = 1;
+    public float damageSpeed = 0.5f;
 
     public float damageTimer = 0;
 

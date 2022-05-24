@@ -17,16 +17,11 @@ public class MyCharacterController : MonoBehaviour
 
      Animator animator;
      public float moveSpeed = 2f;
-
      public float currentHealth = 300;
      public float maxHealth = 300;
-
      public GameObject healthBar;
-
      public Image healthFillBar;
-
      CharacterController characterController;
-
       public int level = 1;
       float currentExp = 0;
 
@@ -82,6 +77,7 @@ public class MyCharacterController : MonoBehaviour
 
     public void AttackRelease(string attackRelease)
     {
+        // closestEnemy = GetClosestEnemy();
         Attack();
     }
     void FixedUpdate()
@@ -90,9 +86,10 @@ public class MyCharacterController : MonoBehaviour
         xV = transform.InverseTransformDirection(xV);
         animator.SetFloat("InputHorizontal",xV.x);
         animator.SetFloat("InputVertical",xV.z);
-        animator.SetFloat("InputMagnitude", new Vector2(joystick.Horizontal,joystick.Vertical).magnitude);
+                animator.SetFloat("InputMagnitude", new Vector2(joystick.Horizontal,joystick.Vertical).magnitude);
+
         healthBar.transform.LookAt(Camera.main.transform.position,Vector3.up);
-        _rigidbody.velocity = new Vector3(joystick.Horizontal * moveSpeed,_rigidbody.velocity.y,joystick.Vertical * moveSpeed);
+        _rigidbody.velocity = new Vector3(joystick.Horizontal,_rigidbody.velocity.y,joystick.Vertical ).normalized * moveSpeed;
       
          if(closestEnemy != null )
             {

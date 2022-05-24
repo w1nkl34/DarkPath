@@ -66,7 +66,7 @@ public class ProjectileMover : MonoBehaviour
                     // int pushVal = Random.Range(0,3);
                     // if(pushVal == 0 )
                     // push = true;
-                    collision.gameObject.GetComponent<EnemyControllerNoEcs>().DamagePlayer(Random.Range(30,50),push);
+                    collision.gameObject.GetComponent<EnemyControllerNoEcs>().DamagePlayer(Random.Range(10,15),push);
                 }
                
             }

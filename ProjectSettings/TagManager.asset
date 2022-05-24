@@ -16,6 +16,7 @@ TagManager:
   - Target
   - Enemy
   - experience
+  - pet
   layers:
   - Default
   - TransparentFX
