@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4987422423021918
 Transform:
   m_ObjectHideFlags: 0
@@ -9783,7 +9783,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4583999991935982
 Transform:
   m_ObjectHideFlags: 0
@@ -20123,7 +20123,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 1
     size3D: 0
     rotation3D: 1
     gravityModifier:
@@ -34763,7 +34763,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 50
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -43992,7 +43992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d72d3ff59d1cd940969007e8f431f21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hit: {fileID: 1976088398460716, guid: 9606fb42e7a97f64d9952a45c6d0f0bb, type: 3}
+  hit: {fileID: 1976088398460716, guid: b58a9729fa2a3d34dabad7f256f3048c, type: 3}
   damage: 0
   attackTime: 0
   delayedAttack: 0

@@ -45,16 +45,17 @@ public class AreaDamage : MonoBehaviour
             if (hit != null)
             {
 
-                if (Constants.hitParticleCount <= Constants.maxHitParticleCount)
-                {
-                    var hitInstance = Instantiate(hit, collision.transform.position, Quaternion.identity);
-                    Constants.hitParticleCount++;
-                    Destroy(hitInstance, 2);
-                }
+               
                 if (collision.gameObject.tag == "Enemy")
                 {
                      if(!damagedEnemies.Contains(collision.gameObject.GetComponent<EnemyControllerNoEcs>()))
                         {
+                            if (Constants.hitParticleCount <= Constants.maxHitParticleCount)
+                            {
+                                var hitInstance = Instantiate(hit, collision.transform.position, Quaternion.identity);
+                                Constants.hitParticleCount++;
+                                Destroy(hitInstance, 2);
+                            }
                             collision.gameObject.GetComponent<EnemyControllerNoEcs>().DamagePlayer((int)(Random.Range(damage, damage * 1.2f)), push);
                             damagedEnemies.Add(collision.gameObject.GetComponent<EnemyControllerNoEcs>());
                         }
