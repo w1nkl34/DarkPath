@@ -9683,7 +9683,10 @@ MonoBehaviour:
   - {fileID: 1620116646029536}
   - {fileID: 1271313977751560}
   - {fileID: 1752385679068124}
-  rioc: 0
+  pierceCount: 0
+  currentPierceCount: 0
+  push: 0
+  damage: 0
 --- !u!199 &199541557569965598
 ParticleSystemRenderer:
   serializedVersion: 6

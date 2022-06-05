@@ -9672,7 +9672,10 @@ MonoBehaviour:
   flash: {fileID: 1367524815892938, guid: 40f5e004d2504a04db181f5453658776, type: 3}
   Detached:
   - {fileID: 1182339972675718}
-  rioc: 0
+  pierceCount: 0
+  currentPierceCount: 0
+  push: 0
+  damage: 0
 --- !u!199 &199496378200092506
 ParticleSystemRenderer:
   serializedVersion: 6

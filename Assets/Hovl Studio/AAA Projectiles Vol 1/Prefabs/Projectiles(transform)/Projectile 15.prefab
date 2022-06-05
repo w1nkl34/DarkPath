@@ -4831,6 +4831,10 @@ MonoBehaviour:
   hit: {fileID: 1255908471818228, guid: b8fcbd19392966d45a5617d1f1e49a9a, type: 3}
   flash: {fileID: 1276646090914482, guid: dfb11343e1f738848a39590c5e36c883, type: 3}
   Detached: []
+  pierceCount: 0
+  currentPierceCount: 0
+  push: 0
+  damage: 0
 --- !u!199 &199764313672918000
 ParticleSystemRenderer:
   serializedVersion: 6
