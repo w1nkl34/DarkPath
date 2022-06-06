@@ -29,6 +29,7 @@ public class EnemyControllerNoEcs : MonoBehaviour
 
     void Awake()
     {
+        healthBar.SetActive(false);
         healthBar.GetComponent<Canvas>().worldCamera = Camera.main;
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -68,6 +69,8 @@ public class EnemyControllerNoEcs : MonoBehaviour
 
     public void DamagePlayer(float damage,bool push)
     {
+        healthBar.SetActive(true);
+
         currentHealth -= damage;
         if(currentHealth <= 0)
         {

@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: ShockWave9
   m_Shader: {fileID: 4800000, guid: fea6d98214cdf6a4dbf053c0070e54e1, type: 3}
   m_ShaderKeywords: 
@@ -27,11 +28,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTexture:
-        m_Texture: {fileID: 2800000, guid: 0011eca0d302ccf47b3969ae089f6573, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6bfcf4e90d569ce4484888b0aee7d89d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Mask:
-        m_Texture: {fileID: 2800000, guid: 680ed321f94f60744a581c7a50bf07ba, type: 3}
+        m_Texture: {fileID: 2800000, guid: db81bbd9980a4f8489fe1c73a6c3c822, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Noise:
@@ -52,3 +53,4 @@ Material:
     - _NoiseSpeedXYPowerZ: {r: 0, g: 0, b: 1, a: 0}
     - _TextureMove: {r: 0, g: 0, b: 0, a: 0}
     - _TintColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
