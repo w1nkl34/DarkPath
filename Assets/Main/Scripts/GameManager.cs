@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> allSkills;
     void Awake()
     {
-        Application.targetFrameRate = 30;
+        Application.targetFrameRate = 60;
         myCharacterController = character.GetComponent<MyCharacterController>();
     }
 
