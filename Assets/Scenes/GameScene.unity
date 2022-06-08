@@ -3150,7 +3150,7 @@ MonoBehaviour:
   enemies:
   - {fileID: 5458741266305983051, guid: 8ffa4b000083d614c9cb3316515b4bcb, type: 3}
   - {fileID: 5458741266305983051, guid: 0196b0cd5f93992408bbd43875d2eee3, type: 3}
-  - {fileID: 5458741266305983051, guid: 3bc5e68188f10084483b181f059eac34, type: 3}
+  - {fileID: 5458741266305983051, guid: b3043bc397a7e04429874ef3c437bbfe, type: 3}
   - {fileID: 5458741266305983051, guid: 8c134882ab421e345ad35b690f6bff2a, type: 3}
   characterPos: {x: 0, y: 0, z: 0}
   experienceParticle: {fileID: 1240875055126586, guid: 2efd61b9ccf276c48af088089fcea0eb, type: 3}
