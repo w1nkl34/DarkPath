@@ -4,9 +4,8 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_Name: Crack17dn
   m_Shader: {fileID: 4800000, guid: 145bae762d8de8f4c8fb1b284128fae7, type: 3}
   m_ShaderKeywords: _USETEXTUREDISSOLVE_ON
@@ -58,7 +57,6 @@ Material:
     - _Dissolvecolor: {r: 1, g: 1, b: 1, a: 1}
     - _DissolvespeedXY: {r: 0, g: 0, b: 0, a: 0}
     - _Maincolor: {r: 1, g: 1, b: 1, a: 1}
-    - _Noisecolor: {r: 1, g: 1, b: 1, a: 1}
+    - _Noisecolor: {r: 0, g: 0, b: 0, a: 1}
     - _NoisespeedXYEmissonZPowerW: {r: 0.1, g: 0.03, b: 8, a: 2}
     - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
-  m_BuildTextureStacks: []

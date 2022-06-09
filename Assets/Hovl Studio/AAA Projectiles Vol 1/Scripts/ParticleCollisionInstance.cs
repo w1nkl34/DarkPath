@@ -23,9 +23,6 @@ public class ParticleCollisionInstance : MonoBehaviour
     }
     void OnParticleCollision(GameObject other)
     {      
-        if(other.gameObject.tag != "Player")
-        {
-
         int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);     
         for (int i = 0; i < numCollisionEvents; i++)
         {
@@ -46,7 +43,6 @@ public class ParticleCollisionInstance : MonoBehaviour
         if (DestoyMainEffect == true)
         {
             Destroy(gameObject, DestroyTimeDelay + 0.5f);
-        }
         }
     }
 }

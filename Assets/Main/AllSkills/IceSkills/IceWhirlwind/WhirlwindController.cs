@@ -22,7 +22,7 @@ public class WhirlwindController : MonoBehaviour
     private void Update()
     {
         attackTimePlus = attackTime + 0.1f;
-        transform.position = new Vector3(target.position.x,target.position.y+1,target.position.z);
+        transform.position = new Vector3(target.position.x,target.position.y+0,target.position.z);
         currentAttackTime += Time.deltaTime;
         if (currentAttackTime >= attackTime)
         {
