@@ -16,7 +16,7 @@ public class MyCharacterController : MonoBehaviour
     public Image delayHealthFill;
     public float lastFillAmount = 1;
     public Text healthText;
-    GameObject closestEnemy = null;
+    public GameObject closestEnemy = null;
 
     public float moveSpeed = 6f;
     public float currentHealth = 300;
@@ -70,16 +70,19 @@ public class MyCharacterController : MonoBehaviour
 
     void Update()
     {
-       closestEnemy = GetClosestEnemy();
-       if(closestEnemy != null)
+        closestEnemy = GetClosestEnemy();
+
+        if (closestEnemy != null)
        {
-           animator.SetBool("attacking",true);
+            animator.SetBool("attacking",true);
        }
        else
        {
-           animator.SetBool("attacking",false);
+            animator.SetBool("attacking",false);
        }
     }
+
+    float gravity = -9.81f;
 
     void FixedUpdate()
     {
@@ -90,11 +93,12 @@ public class MyCharacterController : MonoBehaviour
         animator.SetFloat("InputMagnitude", new Vector2(joystick.Horizontal,joystick.Vertical).magnitude);
 
         healthBar.transform.LookAt(Camera.main.transform.position,Vector3.up);
-        _rigidbody.velocity = new Vector3(joystick.Horizontal,_rigidbody.velocity.y,joystick.Vertical ).normalized * moveSpeed;
-      
+
+        GetComponent<CharacterController>().Move(
+             new Vector3(joystick.Horizontal, gravity, joystick.Vertical).normalized );
         if(closestEnemy != null )
         {
-            Vector3 targetDirection = closestEnemy.transform.position - transform.position;
+            Vector3 targetDirection = new Vector3(closestEnemy.transform.position.x,transform.position.y, closestEnemy.transform.position.z) - transform.position;
             float singleStep = 12 * Time.deltaTime;
             Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
             transform.rotation = Quaternion.LookRotation(newDirection);
@@ -102,7 +106,7 @@ public class MyCharacterController : MonoBehaviour
         else
         {
             float singleStep = 12 * Time.deltaTime;
-            Vector3 newDirection = Vector3.RotateTowards(transform.forward, _rigidbody.velocity, singleStep, 0.0f);
+            Vector3 newDirection = Vector3.RotateTowards(transform.forward, GetComponent<CharacterController>().velocity, singleStep, 0.0f);
             transform.rotation = Quaternion.LookRotation(newDirection);
         }
 

@@ -24,11 +24,15 @@ public class IceShot: Skill
     {
         yield return new WaitForSeconds(0.05f * (float)i);
         GameObject inst = Instantiate(base.prefab,
-        new Vector3(base.myCharacterController.transform.position.x, base.myCharacterController.transform.position.y + 1,
-        base.myCharacterController.transform.position.z), base.myCharacterController.transform.rotation * Quaternion.Euler(0, val, 0));
+        new Vector3(base.myCharacterController.transform.position.x, base.myCharacterController.transform.position.y + 1f,
+        base.myCharacterController.transform.position.z)
+        //+ myCharacterController.transform.forward * 2
+        , base.myCharacterController.transform.rotation * Quaternion.Euler(0, val, 0));
         inst.GetComponent<ProjectileMover>().damage = base.damage + myCharacterController.damage;
         inst.GetComponent<ProjectileMover>().push = push;
         inst.GetComponent<ProjectileMover>().pierceCount = pierceCount;
+        inst.GetComponent<ProjectileMover>().target = myCharacterController.closestEnemy.transform;
+
     }
 
     public override void LevelUp()

@@ -16,10 +16,16 @@ public class ProjectileMover : MonoBehaviour
     public int currentPierceCount = 0;
     public bool push = false;
     public float damage;
+    public Transform target;
+    Vector3 directionToTarget;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        Vector3 displacementFromTarget =
+            new Vector3(target.transform.position.x , target.transform.position.y + 1f, target.transform.position.z) - transform.position;
+        directionToTarget = displacementFromTarget.normalized;
+
         if (flash != null)
         {
             var flashInstance = Instantiate(flash, transform.position, Quaternion.identity);
@@ -36,14 +42,14 @@ public class ProjectileMover : MonoBehaviour
                 Destroy(flashInstance, flashPsParts.main.duration);
             }
         }
+        
         Destroy(gameObject,5);
 	}
-
     void FixedUpdate ()
     {
-		if (speed != 0)
+        if (speed != 0)
         {
-            rb.velocity = transform.forward * speed;
+            rb.velocity = new Vector3(transform.forward.x,directionToTarget.y,transform.forward.z) * speed;
         }
 	}
 
@@ -56,7 +62,7 @@ public class ProjectileMover : MonoBehaviour
 
                 if(Constants.hitParticleCount <= Constants.maxHitParticleCount)
                 {
-                    var hitInstance = Instantiate(hit, collision.transform.position, Quaternion.identity);
+                    var hitInstance = Instantiate(hit, transform.position, Quaternion.identity);
                     Constants.hitParticleCount++;
                     Destroy(hitInstance, 2);
 
@@ -67,7 +73,9 @@ public class ProjectileMover : MonoBehaviour
                     collision.gameObject.GetComponent<EnemyControllerNoEcs>().DamagePlayer((int)( Random.Range(damage, damage * 1.2f)),push);
                 }
             }
-            if(pierceCount == 0 || pierceCount == currentPierceCount)
+
+
+            if(pierceCount == 0 || pierceCount == currentPierceCount || collision.gameObject.tag != "Enemy")
             {
                 foreach (var detachedPrefab in Detached)
                 {
